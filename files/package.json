@@ -1,0 +1,11 @@
+{
+  "name": "files",
+  "version": "1.0.0",
+  "description": "",
+  "main": "table.js",
+  "scripts": {
+    "dev": "node ./table.js"
+  },
+  "author": "",
+  "license": "ISC"
+}

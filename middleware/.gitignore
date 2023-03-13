@@ -1,0 +1,13 @@
+/node_modules
+node_modules
+.composer.lock
+.phpunit.result.cache
+Homestead.json
+Homestead.yaml
+npm-debug.log
+yarn-error.log
+.DS_Store
+seb.code-workspace
+/mysql_data
+/postgres_data
+.env

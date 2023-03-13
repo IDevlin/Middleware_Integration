@@ -1,0 +1,37 @@
+version: "3.3"
+
+services:
+  postgres:
+    image: postgres
+    restart: always
+    ports: 
+      - "5432:5432"
+    environment:
+      - DATABASE_HOST=127.0.0.1
+      - POSTGRES_USER=jsplm
+      - POSTGRES_PASSWORD=admin123
+      - POSTGRES_DB=middleware  
+    volumes:
+      - ./postgres_data:/var/lib/postgresql/data 
+  pgadmin:
+    image: dpage/pgadmin4
+    restart: always
+    environment: 
+      PGADMIN_DEFAULT_EMAIL: "jgonzalez@plm.com.co"
+      PGADMIN_DEFAULT_PASSWORD: "admin123"
+    ports:
+      - "5050:80"
+    depends_on:
+      - postgres 
+  mysql:
+    image: mysql:5
+    environment:
+      - MYSQL_DATABASE=my_store
+      - MYSQL_ROOT_PASSWORD=admin123
+      - MYSQL_PORT=3306
+    ports:
+      - 33061:3306
+    volumes:
+      - ./mysql_data:/var/lib/mysql       
+
+
