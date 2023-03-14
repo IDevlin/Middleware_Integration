@@ -10,4 +10,5 @@ yarn-error.log
 seb.code-workspace
 /mysql_data
 /postgres_data
+docker-compose.yml
 .env
